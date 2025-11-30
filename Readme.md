@@ -32,7 +32,46 @@ This project aims to **raise awareness** about:
 
 ---
 
-## 🔐 Sugestões de Mitigação
+## 🧪 Metodologia /  Methodology
+
+Este estudo foi conduzido em ambiente de laboratório, com o objetivo de simular o funcionamento de ferramentas de criptografia em cenários de **backup seguro** e **ransomware**.  
+
+### Etapas do experimento
+
+1. **Definição do ambiente de teste**  
+   - Criação de diretórios específicos contendo arquivos de exemplo (textos, imagens simples).  
+   - Garantia de que nenhum arquivo de produção ou pessoal fosse utilizado.  
+
+2. **Geração da chave de criptografia**  
+   - A chave é criada dinamicamente com base no computador e usuário.  
+   - É enviada por e‑mail para simular um fluxo de armazenamento externo.  
+   - O arquivo local da chave é removido após o envio, mantendo apenas a versão em memória durante a execução.  
+
+3. **Criptografia dos arquivos**  
+   - Cada arquivo é lido e criptografado com a chave Fernet.  
+   - O conteúdo original é sobrescrito com a versão criptografada.  
+   - Um arquivo de mensagem (“Leia.txt”) é gerado para indicar que os dados foram protegidos.  
+
+4. **Validação do processo**  
+   - Verificação de que todos os arquivos foram alterados.  
+   - Testes de recuperação utilizando a chave recebida por e‑mail.  
+
+### Considerações éticas
+
+- O código **não deve ser usado em ambientes reais** para criptografar dados de terceiros.  
+- O propósito é **educacional e científico**, demonstrando como ataques de ransomware funcionam e como backups criptografados podem ser implementados.  
+
+### Mitigação e boas práticas
+
+- **Backups offline e em nuvem**: manter cópias redundantes fora do alcance de ataques.  
+- **Gestão de chaves**: utilizar cofres digitais para armazenar chaves de forma segura.  
+- **Monitoramento de comportamento**: detectar processos que tentam criptografar grandes volumes de arquivos.  
+- **Treinamento de usuários**: reduzir riscos de infecção por phishing e engenharia social.  
+- **Testes periódicos de restauração**: garantir que backups possam ser recuperados em caso de incidente.  
+
+---
+
+## 🔐 Sugestões de Mitigação / Mitigation and best practices
 
 Para lidar com riscos de ransomware e proteger dados críticos:
 
@@ -41,5 +80,6 @@ Para lidar com riscos de ransomware e proteger dados críticos:
 - **Monitoramento de rede**: detecte comportamentos suspeitos de criptografia em massa.
 - **Educação de usuários**: conscientização sobre phishing e boas práticas de segurança.
 - **Testes de recuperação**: valide periodicamente se backups podem ser restaurados.
+- **Ferramentas de zero trust**: a exemplo o Treathlocker, dificultando a execução de programas desconhecidos no perfil do usuário.
 
 ---

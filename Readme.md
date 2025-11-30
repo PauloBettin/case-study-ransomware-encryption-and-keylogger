@@ -42,41 +42,46 @@ Este estudo foi conduzido em ambiente de laboratório, com o objetivo de simular
    - Foi utilizada uma Máquina virtual Windows 11 com Windows Defender devidamente configurado e funcional.
    - Criação de diretórios específicos contendo arquivos de exemplo (textos, imagens simples).  
    - Garantia de que nenhum arquivo de produção ou pessoal fosse utilizado.
-   - Todos os arquivos de Python foram **compilados** para executávies windows e utilizados neste ambiente de simulação
-   - Foram utilizados batch scripts / vb scripts de apoio para uma instalação silent, sthealth e persistente no ambiente de teste.
+   - Todos os arquivos de Python foram **compilados** para executáveis windows e utilizados neste ambiente de simulação
+   - Foram utilizados batch scripts / vb scripts de apoio para uma instalação silent, stealth e persistente no ambiente de teste.
 
-3. **Geração da chave de criptografia**  
+2. **Geração da chave de criptografia**  
    - A chave é criada dinamicamente com base no computador e usuário.  
    - É enviada por e‑mail para simular um fluxo de armazenamento externo.  
    - O arquivo local da chave é removido após o envio, mantendo apenas a versão em memória durante a execução.  
 
-4. **Criptografia dos arquivos**  
+3. **Criptografia dos arquivos**  
    - Cada arquivo é lido e criptografado com a chave Fernet.  
    - O conteúdo original é sobrescrito com a versão criptografada.  
    - Um arquivo de mensagem (“Leia.txt”) é gerado para indicar que os dados foram protegidos.  
 
-5. **Validação do processo**  
+4. **Validação do processo**  
    - Verificação de que todos os arquivos foram alterados.  
    - Testes de recuperação utilizando a chave recebida por e‑mail.
 
 ### Consideração Final / Final Consideration
 
-Este resultado reforça a necessidade de **modelos de segurança Zero Trust**, nos quais nenhuma aplicação ou processo é implicitamente confiável.  
-Mesmo ferramentas aparentemente benignas podem ser executadas sem bloqueio.
-
+“Os resultados demonstram que mesmo ambientes protegidos podem permitir execução de ferramentas não confiáveis, reforçando a necessidade de políticas de Zero Trust e auditoria contínua.”
 ---
 
 ## 🔐 Sugestões de Mitigação / Mitigation and best practices
 
 Para lidar com riscos de ransomware e proteger dados críticos:
 
-- **Monitoramento contínuo** é essencial para detectar comportamentos suspeitos.  
-- **Políticas de Zero Trust** devem ser aplicadas para validar cada execução e acesso.  
+- **Monitoramento contínuo** é essencial para detectar comportamentos suspeitos.
+  
+- **Políticas de Zero Trust** devem ser aplicadas para validar cada execução e acesso.
+  
 - **Backups criptografados e gestão de chaves** são fundamentais para garantir resiliência contra ataques.
-- **Utilização de arquivos em nuvem**, para guardar as versões dos documentos e seus snapshots.  
+  
+- **Utilização de arquivos em nuvem**, para guardar as versões dos documentos e seus snapshots.
+  
 - **Backups regulares**: mantenha cópias offline.
+  
 - **Gestão de chaves**: nunca perca a chave de criptografia; use cofres digitais.
+  
 - **Educação de usuários**: conscientização sobre phishing e boas práticas de segurança.
+  
 - **Testes de recuperação**: valide periodicamente se backups podem ser restaurados.
 
 ---

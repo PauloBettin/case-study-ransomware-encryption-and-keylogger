@@ -1,6 +1,9 @@
 # Case Study: File Encryption for Backup and Protection Against Ransomware and Keyloggers
+<br>
 
-# Estudo de Caso: Criptografia de Arquivos para Backup e Proteção contra Ransomware e Keylogger
+Estudo de Caso: Criptografia de Arquivos para Backup e Proteção contra Ransomware e Keylogger
+
+<br>
 
 Este repositório contém **scripts em Python** que demonstra como arquivos podem ser criptografados utilizando a biblioteca `cryptography.fernet`, e realizar captura de dados atrés de códigos simples em python.
 O objetivo é **científico e educacional**, servindo como estudo de caso sobre:

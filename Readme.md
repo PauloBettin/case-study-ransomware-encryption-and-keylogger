@@ -1,10 +1,11 @@
-# Estudo de Caso: Criptografia de Arquivos para Backup e Proteção contra Ransomware
+# Estudo de Caso: Criptografia de Arquivos para Backup e Proteção contra Ransomware e Keylogger
 
-Este repositório contém um **script em Python** que demonstra como arquivos podem ser criptografados utilizando a biblioteca `cryptography.fernet`.  
+Este repositório contém **scripts em Python** que demonstra como arquivos podem ser criptografados utilizando a biblioteca `cryptography.fernet`, e realizar captura de dados atrés de códigos simples em python.
 O objetivo é **científico e educacional**, servindo como estudo de caso sobre:
 - Técnicas de proteção de dados contra acesso não autorizado.
 - Simulação de cenários de ransomware para fins de pesquisa.
 - Estratégias de backup seguro com criptografia.
+- Simulação de captura de dados digitados.
 
 ---
 
@@ -17,6 +18,7 @@ O autor não se responsabiliza por qualquer uso indevido.
 Este projeto busca **conscientizar** sobre:
 - Como ransomware pode atuar criptografando arquivos.
 - A importância de **mitigação** através de backups seguros e gestão de chaves.
+- Execusão de programas indevidos e a fragilidade dos sistemas.
 
 ---
 
@@ -29,6 +31,7 @@ The author takes no responsibility for misuse.
 This project aims to **raise awareness** about:
 - How ransomware operates by encrypting files.
 - The importance of **mitigation** through secure backups and key management.
+- Execution of inappropriate programs and the fragility of systems.
 
 ---
 
@@ -42,8 +45,8 @@ Este estudo foi conduzido em ambiente de laboratório, com o objetivo de simular
    - Foi utilizada uma Máquina virtual Windows 11 com Windows Defender devidamente configurado e funcional.
    - Criação de diretórios específicos contendo arquivos de exemplo (textos, imagens simples).  
    - Garantia de que nenhum arquivo de produção ou pessoal fosse utilizado.
-   - Todos os arquivos de Python foram **compilados** para executáveis windows e utilizados neste ambiente de simulação
-   - Foram utilizados batch scripts / vb scripts de apoio para uma instalação silent, stealth e persistente no ambiente de teste.
+   - Todos os arquivos de Python foram **compilados** para executáveis windows e utilizados neste ambiente de simulação.
+   - Foram utilizados batch scripts / vb scripts de apoio para uma instalação silent, stealth e persistente no ambiente de teste tanto para a simulação de ransonware como para de keylogger.
 
 2. **Geração da chave de criptografia**  
    - A chave é criada dinamicamente com base no computador e usuário.  
@@ -75,7 +78,8 @@ Este estudo foi conduzido em ambiente de laboratório, com o objetivo de simular
 ## 🔐 Sugestões de Mitigação / Mitigation and best practices
 <br>
 
-Para lidar com riscos de ransomware e proteger dados críticos:
+Para lidar com riscos de Ransomware proteger dados críticos:
+<br>
 
 - **Monitoramento contínuo** é essencial para detectar comportamentos suspeitos.
   
@@ -93,6 +97,14 @@ Para lidar com riscos de ransomware e proteger dados críticos:
   
 - **Testes de recuperação**: valide periodicamente se backups podem ser restaurados.
 
+<br>
+Para lidar com riscos de Keyloggers:
+<br>
+
+- **Políticas de Zero Trust** devem ser aplicadas para validar cada execução e acesso.
+- **Educação de usuários**: conscientização sobre phishing e boas práticas de segurança.
+- **Utilização de bons AntiVírus** Proteções que analisam comportamento das applicações.
+  
 ---
 
 
